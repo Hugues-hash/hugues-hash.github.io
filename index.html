@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kokou Hugues Minasseh</title>
+<meta name="description" content="Kokou Hugues Minasseh. Commonwealth Scholar and MSc Artificial Intelligence and Data Science graduate. I build and validate machine learning and quantitative models in Python and C++.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231f4e79'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Georgia,serif' fill='white' text-anchor='middle'%3EKM%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --navy:#1f4e79;
+    --navy-soft:#2c6aa8;
+    --ink:#1a1d21;
+    --muted:#5b6470;
+    --line:#e7e9ee;
+    --bg:#ffffff;
+    --card:#ffffff;
+    --tag:#eef3f9;
+    --tag-ink:#28517d;
+    --maxw:880px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --navy:#7fb2e6;
+      --navy-soft:#9cc4ee;
+      --ink:#e8eaed;
+      --muted:#9aa3af;
+      --line:#242832;
+      --bg:#0f1216;
+      --card:#151a20;
+      --tag:#182430;
+      --tag-ink:#9cc4ee;
+    }
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--navy);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  /* top nav */
+  header.nav{
+    position:sticky;top:0;z-index:10;
+    background:color-mix(in srgb,var(--bg) 88%,transparent);
+    backdrop-filter:saturate(140%) blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px;}
+  .brand{font-weight:700;letter-spacing:.2px;color:var(--ink);}
+  .nav-links{display:flex;gap:22px;font-size:.94rem;}
+  .nav-links a{color:var(--muted);}
+  .nav-links a:hover{color:var(--navy);text-decoration:none;}
+  @media(max-width:620px){.nav-links{display:none;}}
+
+  /* hero */
+  .hero{padding:72px 0 40px;}
+  .badge{
+    display:inline-block;font-size:.8rem;font-weight:600;
+    color:var(--tag-ink);background:var(--tag);
+    padding:5px 12px;border-radius:999px;margin-bottom:20px;
+    border:1px solid color-mix(in srgb,var(--navy) 22%,transparent);
+  }
+  .hero h1{font-size:2.7rem;line-height:1.1;margin:0 0 10px;letter-spacing:-.5px;}
+  .hero .role{font-size:1.15rem;color:var(--navy);font-weight:600;margin-bottom:18px;}
+  .hero .pitch{font-size:1.18rem;color:var(--ink);max-width:640px;margin:0 0 14px;}
+  .hero .meta{color:var(--muted);font-size:.97rem;margin-bottom:28px;}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:11px 18px;border-radius:10px;font-weight:600;font-size:.95rem;
+    border:1px solid var(--line);color:var(--ink);background:var(--card);
+    transition:transform .12s ease,border-color .12s ease,box-shadow .12s ease;
+  }
+  .btn:hover{text-decoration:none;transform:translateY(-1px);border-color:var(--navy);box-shadow:0 4px 14px rgba(31,78,121,.10);}
+  .btn.primary{background:var(--navy);color:#fff;border-color:var(--navy);}
+  .btn.primary:hover{background:var(--navy-soft);border-color:var(--navy-soft);}
+
+  /* sections */
+  section{padding:34px 0;border-top:1px solid var(--line);}
+  section h2{font-size:1.05rem;text-transform:uppercase;letter-spacing:1.4px;color:var(--muted);margin:0 0 22px;font-weight:700;}
+  .lead{font-size:1.08rem;max-width:680px;}
+  .lead p{margin:0 0 14px;}
+
+  /* projects */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media(max-width:620px){.grid{grid-template-columns:1fr;}}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;
+    transition:transform .14s ease,box-shadow .14s ease,border-color .14s ease;
+    display:flex;flex-direction:column;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(20,30,50,.10);border-color:color-mix(in srgb,var(--navy) 35%,var(--line));}
+  .card .lang{font-size:.72rem;font-weight:700;letter-spacing:.6px;color:var(--tag-ink);text-transform:uppercase;}
+  .card h3{margin:8px 0 8px;font-size:1.12rem;line-height:1.3;}
+  .card p{margin:0 0 16px;color:var(--muted);font-size:.96rem;flex:1;}
+  .card .repo{font-weight:600;font-size:.92rem;}
+  .card .repo::after{content:" \2197";}
+
+  /* skills */
+  .skillrow{margin-bottom:16px;}
+  .skillrow .h{font-weight:700;font-size:.95rem;margin-bottom:8px;}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;}
+  .tag{background:var(--tag);color:var(--tag-ink);border-radius:8px;padding:5px 11px;font-size:.86rem;font-weight:500;}
+
+  /* education */
+  .edu{display:flex;flex-direction:column;gap:16px;}
+  .edu .row{display:flex;justify-content:space-between;gap:16px;align-items:baseline;}
+  .edu .row .d{color:var(--muted);font-size:.9rem;white-space:nowrap;}
+  .edu .deg{font-weight:600;}
+  .edu .school{color:var(--muted);font-size:.95rem;}
+  .edu .sch-note{color:var(--navy);font-weight:600;font-size:.9rem;}
+
+  footer{border-top:1px solid var(--line);padding:34px 0 60px;color:var(--muted);font-size:.94rem;}
+  footer .links{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:14px;}
+  footer a{font-weight:600;}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <span class="brand">Kokou Hugues Minasseh</span>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" style="border-top:none;">
+    <span class="badge">Commonwealth Scholar &nbsp;·&nbsp; UK Government (FCDO)</span>
+    <h1>Kokou Hugues Minasseh</h1>
+    <div class="role">Machine Learning &amp; Quantitative Modelling &nbsp;·&nbsp; Data Science &amp; Model Risk</div>
+    <p class="pitch">I build machine learning and quantitative models, and I validate them the way a risk team would before trusting them.</p>
+    <p class="meta">MSc Artificial Intelligence &amp; Data Science, University of Hull &nbsp;·&nbsp; Hull, UK &nbsp;·&nbsp; Available from September 2026</p>
+    <div class="cta">
+      <a class="btn primary" href="Kokou_Hugues_Minasseh_CV.pdf">Download CV</a>
+      <a class="btn" href="https://github.com/Hugues-hash" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/kokou-hugues-minasseh-b426591b8" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="mailto:mink_hugues@outlook.com">Email</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="lead">
+      <p>My route into data science is a little different. I trained as an engineer, worked in flight operations and electrical engineering, and kept gravitating toward the data side of every problem. That pull led me to an MSc in Artificial Intelligence and Data Science at the University of Hull, funded by a Commonwealth Scholarship, a competitive UK Government scholarship awarded on academic merit and leadership potential.</p>
+      <p>What I care about is not just building a model, but proving it is sound: benchmarking it against a known answer, testing where it holds and where it breaks, and reporting the result honestly. I am now looking for 2027 UK graduate roles in data science, quantitative analysis, risk and machine learning. Open to remote, hybrid or on-site across the UK, with no visa sponsorship required.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Selected projects</h2>
+    <div class="grid">
+
+      <div class="card">
+        <span class="lang">Python</span>
+        <h3>Volatility Forecasting &amp; Strategy Backtesting</h3>
+        <p>Six volatility models compared out of sample on 21 years of S&amp;P 500 data, ranked by QLIKE and Diebold-Mariano, turned into a volatility-targeting strategy, and validated as one-day Value-at-Risk models with the Kupiec and Christoffersen tests.</p>
+        <a class="repo" href="https://github.com/Hugues-hash/volatility-strategy-backtesting" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+
+      <div class="card">
+        <span class="lang">Python</span>
+        <h3>Regime &amp; Drift Detection in Financial Time Series</h3>
+        <p>A two-state Hidden Markov Model labels calm and stressed regimes on the S&amp;P 500, and three drift metrics (PSI, KS, KL) are shown to track a live model's rising error, turning distribution drift into an early warning for model decay.</p>
+        <a class="repo" href="https://github.com/Hugues-hash/drift_detection" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+
+      <div class="card">
+        <span class="lang">C++</span>
+        <h3>Monte Carlo Option Pricer</h3>
+        <p>A C++ pricing engine benchmarked against the closed-form Black-Scholes price, checked for convergence at the theoretical rate, sharpened with antithetic and control-variate variance reduction, with finite-difference Greeks and an optional pybind11 Python binding.</p>
+        <a class="repo" href="https://github.com/Hugues-hash/monte-carlo-option-pricer" target="_blank" rel="noopener">View on GitHub</a>
+      </div>
+
+      <div class="card">
+        <span class="lang">Python &nbsp;·&nbsp; Deep Learning</span>
+        <h3>American Sign Language Recognition <span style="color:var(--navy);">(Hackathon Winner)</span></h3>
+        <p>Adapted and evaluated a pretrained I3D video model for sign-language recognition on the WLASL100 dataset, with top-k metrics and confusion-matrix error analysis, and a prototype for context-aware prediction refinement.</p>
+        <span class="repo" style="color:var(--muted);">University of Hull (DAIM)</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical toolkit</h2>
+    <div class="skillrow">
+      <div class="h">Languages</div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">C++</span><span class="tag">SQL</span></div>
+    </div>
+    <div class="skillrow">
+      <div class="h">Machine learning</div>
+      <div class="tags"><span class="tag">Deep learning (LSTM, Transformer)</span><span class="tag">NLP</span><span class="tag">Time-series forecasting</span><span class="tag">Model evaluation</span><span class="tag">TensorFlow</span><span class="tag">scikit-learn</span></div>
+    </div>
+    <div class="skillrow">
+      <div class="h">Quant &amp; risk methods</div>
+      <div class="tags"><span class="tag">GARCH / GJR / EGARCH</span><span class="tag">Hidden Markov Models</span><span class="tag">Monte Carlo</span><span class="tag">Value at Risk (Kupiec, Christoffersen)</span><span class="tag">PSI / KS / KL drift</span><span class="tag">Backtesting</span></div>
+    </div>
+    <div class="skillrow">
+      <div class="h">Libraries &amp; tools</div>
+      <div class="tags"><span class="tag">pandas</span><span class="tag">NumPy</span><span class="tag">arch</span><span class="tag">hmmlearn</span><span class="tag">Matplotlib</span><span class="tag">CMake</span><span class="tag">pybind11</span><span class="tag">Git</span></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="edu">
+      <div>
+        <div class="row"><span class="deg">MSc, Artificial Intelligence &amp; Data Science</span><span class="d">2025 – 2026</span></div>
+        <div class="school">University of Hull, UK &nbsp;·&nbsp; <span class="sch-note">Commonwealth Scholar (UK Government / FCDO)</span></div>
+      </div>
+      <div>
+        <div class="row"><span class="deg">MSc, Mechatronics Engineering</span><span class="d">2019 – 2022</span></div>
+        <div class="school">University of Shanghai for Science and Technology, China</div>
+      </div>
+      <div>
+        <div class="row"><span class="deg">Bachelor, Electrical Engineering</span><span class="d">2015 – 2018</span></div>
+        <div class="school">National Higher School of Engineers (ENSI), Lomé, Togo</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="links">
+      <a href="mailto:mink_hugues@outlook.com">mink_hugues@outlook.com</a>
+      <a href="https://github.com/Hugues-hash" target="_blank" rel="noopener">github.com/Hugues-hash</a>
+      <a href="https://www.linkedin.com/in/kokou-hugues-minasseh-b426591b8" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div>Based in Hull, UK &nbsp;·&nbsp; Commonwealth Scholar &nbsp;·&nbsp; © 2026 Kokou Hugues Minasseh</div>
+  </div>
+</footer>
+
+</body>
+</html>
